@@ -1,0 +1,22 @@
+name: STIGA A-Series
+version: "1.0.0"
+slug: stiga_monitor
+description: STIGA A-Series monitor
+
+startup: services
+boot: auto
+init: false
+
+arch:
+  - amd64
+  - aarch64
+
+options:
+  username: ""
+  password: ""
+  broker_override: auto
+
+schema:
+  username: str
+  password: password
+  broker_override: list(auto|broker|broker1|broker2)
