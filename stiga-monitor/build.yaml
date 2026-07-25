@@ -1,0 +1,25 @@
+name: "STIGA A-Series"
+version: "0.1.0"
+slug: "stiga_monitor"
+description: "STIGA A-Series monitor for Home Assistant"
+startup: services
+boot: auto
+init: false
+
+build:
+  dockerfile: Dockerfile
+
+arch:
+  - amd64
+  - aarch64
+  - armv7
+
+options:
+  username: ""
+  password: ""
+  broker_override: "broker"
+
+schema:
+  username: str
+  password: password
+  broker_override: list(auto|broker|broker1|broker2)
